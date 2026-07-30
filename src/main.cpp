@@ -1,6 +1,7 @@
 #include <iostream>
-using namespace std;
+#include "../include/searching.h"
 
+using namespace std;
 void showMenu() {
     cout << "\n";
     cout << "==============================\n";
@@ -28,8 +29,8 @@ int main() {
         cin >> choice;
         switch (choice) {
             case 1:
-                cout << "Searching Algorithms - Coming Soon!\n";
-                break;
+             linearSearch();
+              break;
             case 2:
                 cout << "Sorting Algorithms - Coming Soon!\n";
                 break;
