@@ -22,15 +22,44 @@ void showMenu() {
     cout << "==============================\n";
     cout << "Enter your choice: ";
 }
+void searchingMenu() {
+
+    int choice;
+
+    cout << "\n===== Searching Algorithms =====\n";
+    cout << "1. Linear Search\n";
+    cout << "2. Binary Search\n";
+    cout << "0. Back\n";
+    cout << "Enter your choice: ";
+
+    cin >> choice;
+
+    switch (choice) {
+
+        case 1:
+            linearSearch();
+            break;
+
+        case 2:
+            binarySearch();
+            break;
+
+        case 0:
+            break;
+
+        default:
+            cout << "Invalid choice.\n";
+    }
+}
 int main() {
     int choice;
     do {
         showMenu();
         cin >> choice;
         switch (choice) {
-            case 1:
-             linearSearch();
-              break;
+          case 1:
+    searchingMenu();
+    break;
             case 2:
                 cout << "Sorting Algorithms - Coming Soon!\n";
                 break;

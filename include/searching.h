@@ -2,4 +2,6 @@
 #define SEARCHING_H
 
 void linearSearch();
+void binarySearch();
+
 #endif
