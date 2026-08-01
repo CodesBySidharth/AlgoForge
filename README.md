@@ -3,6 +3,7 @@
 ### Searching
 - [x] Linear Search
 - [x] Binary Search
+- [x] First Occurrence
 
 ### Sorting
 - [ ] Bubble Sort

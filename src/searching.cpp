@@ -71,3 +71,56 @@ void binarySearch() {
     }
     delete[] arr;
 }
+void firstOccurrence() {
+
+    int n;
+
+    cout << "\n--- First Occurrence ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    int* arr = new int[n];
+
+    cout << "Enter elements in sorted order: ";
+
+    for(int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    int target;
+
+    cout << "Enter target: ";
+    cin >> target;
+
+    int left = 0;
+    int right = n - 1;
+    int ans = -1;
+
+    while(left <= right){
+
+        int mid = left + (right - left) / 2;
+
+        if(arr[mid] == target){
+
+            ans = mid;
+            right = mid - 1;
+
+        }
+        else if(arr[mid] < target){
+
+            left = mid + 1;
+
+        }
+        else{
+
+            right = mid - 1;
+
+        }
+
+    }
+    if(ans == -1)
+        cout << "Element not found\n";
+    else
+        cout << "First occurrence is at index " << ans << endl;
+
+    delete[] arr;
+}

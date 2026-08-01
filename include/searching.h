@@ -3,5 +3,6 @@
 
 void linearSearch();
 void binarySearch();
+void firstOccurrence();
 
 #endif
