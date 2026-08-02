@@ -4,6 +4,7 @@
 - [x] Linear Search
 - [x] Binary Search
 - [x] First Occurrence
+- [x] Last Occurrence
 
 ### Sorting
 - [ ] Bubble Sort
