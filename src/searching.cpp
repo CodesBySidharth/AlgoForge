@@ -178,3 +178,78 @@ void lastOccurrence() {
 
     delete[] arr;
 }
+void countOccurrences() {
+
+    int n;
+
+    cout << "\n--- Count Occurrences ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    int* arr = new int[n];
+
+    cout << "Enter elements in sorted order: ";
+
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    int target;
+
+    cout << "Enter target: ";
+    cin >> target;
+
+    int first = -1;
+    int last = -1;
+
+    // Find First Occurrence
+    int left = 0;
+    int right = n - 1;
+
+    while (left <= right) {
+
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] == target) {
+            first = mid;
+            right = mid - 1;
+        }
+        else if (arr[mid] < target) {
+            left = mid + 1;
+        }
+        else {
+            right = mid - 1;
+        }
+    }
+
+    // Find Last Occurrence
+    left = 0;
+    right = n - 1;
+
+    while (left <= right) {
+
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] == target) {
+            last = mid;
+            left = mid + 1;
+        }
+        else if (arr[mid] < target) {
+            left = mid + 1;
+        }
+        else {
+            right = mid - 1;
+        }
+    }
+
+    if (first == -1) {
+        cout << "Element not found.\n";
+    }
+    else {
+        cout << "Element occurs "
+             << last - first + 1
+             << " times.\n";
+    }
+
+    delete[] arr;
+}

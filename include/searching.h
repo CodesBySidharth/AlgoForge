@@ -5,4 +5,5 @@ void linearSearch();
 void binarySearch();
 void firstOccurrence();
 void lastOccurrence();
+void countOccurrences();
 #endif

@@ -5,6 +5,7 @@
 - [x] Binary Search
 - [x] First Occurrence
 - [x] Last Occurrence
+- [x] Count Occurrences
 
 ### Sorting
 - [ ] Bubble Sort
