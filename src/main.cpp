@@ -32,6 +32,7 @@ void searchingMenu() {
    cout << "3. First Occurrence\n";
    cout << "4. Last Occurrence\n";
    cout << "5. Count Occurrences\n";
+   cout << "6. Lower Bound\n";
     cout << "0. Back\n";
     cout << "Enter your choice: ";
 
@@ -55,6 +56,9 @@ void searchingMenu() {
           case 5:
           countOccurrences();
            break;
+           case 6:
+    lowerBound();
+    break;
         case 0:
             break;
 

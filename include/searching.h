@@ -6,4 +6,5 @@ void binarySearch();
 void firstOccurrence();
 void lastOccurrence();
 void countOccurrences();
+void lowerBound();
 #endif

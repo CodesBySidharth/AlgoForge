@@ -6,6 +6,7 @@
 - [x] First Occurrence
 - [x] Last Occurrence
 - [x] Count Occurrences
+- [x] Lower Bound
 
 ### Sorting
 - [ ] Bubble Sort

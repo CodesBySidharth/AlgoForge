@@ -124,7 +124,7 @@ void firstOccurrence() {
 
     delete[] arr;
 }
-void lastOccurrence() {
+cvoid lastOccurrence() {
 
     int n;
 
@@ -251,5 +251,37 @@ void countOccurrences() {
              << " times.\n";
     }
 
+    delete[] arr;
+}
+void lowerBound() {
+    int n;
+    cout << "\n--- Lower Bound ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    int* arr = new int[n];
+    cout << "Enter sorted elements: ";
+    for(int i = 0; i < n; i++)
+        cin >> arr[i];
+    int target;
+    cout << "Enter target: ";
+    cin >> target;
+    int left = 0;
+    int right = n - 1;
+    int ans = n;
+    while(left <= right){
+        int mid = left + (right - left) / 2;
+
+        if(arr[mid] >= target){
+
+            ans = mid;
+            right = mid - 1; }
+        else{
+
+            left = mid + 1; }
+    }
+    if(ans == n)
+        cout << "Lower Bound does not exist.\n";
+    else
+        cout << "Lower Bound Index = " << ans << endl;
     delete[] arr;
 }
