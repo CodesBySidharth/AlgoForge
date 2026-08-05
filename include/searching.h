@@ -7,4 +7,5 @@ void firstOccurrence();
 void lastOccurrence();
 void countOccurrences();
 void lowerBound();
+void upperBound();
 #endif

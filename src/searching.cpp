@@ -285,3 +285,48 @@ void lowerBound() {
         cout << "Lower Bound Index = " << ans << endl;
     delete[] arr;
 }
+void upperBound() {
+
+    int n;
+
+    cout << "\n--- Upper Bound ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    int* arr = new int[n];
+
+    cout << "Enter elements in sorted order: ";
+
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    int target;
+
+    cout << "Enter target: ";
+    cin >> target;
+
+    int left = 0;
+    int right = n - 1;
+    int ans = n;
+
+    while (left <= right) {
+
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] > target) {
+            ans = mid;
+            right = mid - 1;
+        }
+        else {
+            left = mid + 1;
+        }
+    }
+
+    if (ans == n)
+        cout << "Upper Bound does not exist.\n";
+    else
+        cout << "Upper Bound Index = " << ans << endl;
+
+    delete[] arr;
+}
