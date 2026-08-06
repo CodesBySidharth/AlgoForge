@@ -1,7 +1,8 @@
 #include <iostream>
 #include "../include/searching.h"
-
+#include "../include/sorting.h"
 using namespace std;
+
 void showMenu() {
     cout << "\n";
     cout << "==============================\n";
@@ -23,52 +24,66 @@ void showMenu() {
     cout << "Enter your choice: ";
 }
 void searchingMenu() {
-
     int choice;
-
-    cout << "\n===== Searching Algorithms =====\n";
-    cout << "1. Linear Search\n";
-    cout << "2. Binary Search\n";
-   cout << "3. First Occurrence\n";
-   cout << "4. Last Occurrence\n";
-   cout << "5. Count Occurrences\n";
-   cout << "6. Lower Bound\n";
-   cout << "7. Upper Bound\n";
-    cout << "0. Back\n";
-    cout << "Enter your choice: ";
-
-    cin >> choice;
-
-    switch (choice) {
-
-        case 1:
-            linearSearch();
-            break;
-
-        case 2:
-            binarySearch();
-            break;
+    do {
+        cout << "\n===== Searching Algorithms =====\n";
+        cout << "1. Linear Search\n";
+        cout << "2. Binary Search\n";
+        cout << "3. First Occurrence\n";
+        cout << "4. Last Occurrence\n";
+        cout << "5. Count Occurrences\n";
+        cout << "6. Lower Bound\n";
+        cout << "7. Upper Bound\n";
+        cout << "0. Back\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+        switch (choice) {
+            case 1:
+                linearSearch();
+                break;
+            case 2:
+                binarySearch();
+                break;
             case 3:
-            firstOccurrence();
-            break;
+                firstOccurrence();
+                break;
             case 4:
-        lastOccurrence();
-        break;
-          case 5:
-          countOccurrences();
-           break;
-           case 6:
-    lowerBound();
-    break;
-        case 7:
-    upperBound();
-    break;
-        case 0:
-            break;
-
-        default:
-            cout << "Invalid choice.\n";
-    }
+                lastOccurrence();
+                break;
+            case 5:
+                countOccurrences();
+                break;
+            case 6:
+                lowerBound();
+                break;
+            case 7:
+                upperBound();
+                break;
+            case 0:
+                break;
+            default:
+                cout << "Invalid Choice!\n";
+        }
+    } while (choice != 0);
+}
+void sortingMenu() {
+    int choice;
+    do {
+        cout << "\n===== Sorting Algorithms =====\n";
+        cout << "1. Bubble Sort\n";
+        cout << "0. Back\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+        switch (choice) {
+            case 1:
+                bubbleSort();
+                break;
+            case 0:
+                break;
+            default:
+                cout << "Invalid Choice!\n";
+        }
+    } while (choice != 0);
 }
 int main() {
     int choice;
@@ -76,11 +91,11 @@ int main() {
         showMenu();
         cin >> choice;
         switch (choice) {
-          case 1:
-    searchingMenu();
-    break;
+            case 1:
+                searchingMenu();
+                break;
             case 2:
-                cout << "Sorting Algorithms - Coming Soon!\n";
+                sortingMenu();
                 break;
             case 3:
                 cout << "Number Theory - Coming Soon!\n";
@@ -110,10 +125,11 @@ int main() {
                 cout << "Algorithm Benchmark - Coming Soon!\n";
                 break;
             case 0:
-                cout << "Thanks for using AlgoForge!\n";
+                cout << "\nThanks for using AlgoForge!\n";
                 break;
             default:
-                cout << "Invalid choice. Try again.\n";}
+                cout << "Invalid Choice! Try Again.\n";
+        }
     } while (choice != 0);
     return 0;
 }

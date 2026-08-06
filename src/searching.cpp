@@ -124,7 +124,7 @@ void firstOccurrence() {
 
     delete[] arr;
 }
-cvoid lastOccurrence() {
+void lastOccurrence() {
 
     int n;
 
@@ -201,8 +201,6 @@ void countOccurrences() {
 
     int first = -1;
     int last = -1;
-
-    // Find First Occurrence
     int left = 0;
     int right = n - 1;
 
@@ -221,8 +219,6 @@ void countOccurrences() {
             right = mid - 1;
         }
     }
-
-    // Find Last Occurrence
     left = 0;
     right = n - 1;
 

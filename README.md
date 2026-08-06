@@ -10,7 +10,8 @@
 - [x] Upper Bound
 
 ### Sorting
-- [ ] Bubble Sort
+## Sorting Algorithms
+- [x] Bubble Sort
 - [ ] Selection Sort
 - [ ] Insertion Sort
 - [ ] Merge Sort
