@@ -71,6 +71,7 @@ void sortingMenu() {
     do {
         cout << "\n===== Sorting Algorithms =====\n";
         cout << "1. Bubble Sort\n";
+        cout << "2. Selection Sort\n";
         cout << "0. Back\n";
         cout << "Enter your choice: ";
         cin >> choice;
@@ -78,6 +79,9 @@ void sortingMenu() {
             case 1:
                 bubbleSort();
                 break;
+                case 2:
+    selectionSort();
+    break;
             case 0:
                 break;
             default:
