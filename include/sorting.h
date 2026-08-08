@@ -3,4 +3,5 @@
 
 void bubbleSort();
 void selectionSort();
+void insertionSort();
 #endif
