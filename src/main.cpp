@@ -72,7 +72,8 @@ void sortingMenu() {
         cout << "\n===== Sorting Algorithms =====\n";
         cout << "1. Bubble Sort\n";
         cout << "2. Selection Sort\n";
-        cout << "3. Insertion Sort\n";
+        cout << "3. Insertion Sort\n"
+        cout << "4. Merge Sort\n";;
         cout << "0. Back\n";
         cout << "Enter your choice: ";
         cin >> choice;
@@ -85,6 +86,9 @@ void sortingMenu() {
     break;
     case 3:
     insertionSort();
+    break;
+    case 4:
+    mergeSortDemo();
     break;
             case 0:
                 break;

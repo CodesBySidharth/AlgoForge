@@ -8,4 +8,5 @@ void lastOccurrence();
 void countOccurrences();
 void lowerBound();
 void upperBound();
+void mergeSortDemo();
 #endif
