@@ -74,6 +74,7 @@ void sortingMenu() {
         cout << "2. Selection Sort\n";
         cout << "3. Insertion Sort\n"
         cout << "4. Merge Sort\n";;
+        cout << "5. Quick Sort\n";
         cout << "0. Back\n";
         cout << "Enter your choice: ";
         cin >> choice;
@@ -89,6 +90,9 @@ void sortingMenu() {
     break;
     case 4:
     mergeSortDemo();
+    break;
+    case 5:
+    quickSortDemo();
     break;
             case 0:
                 break;
