@@ -16,3 +16,7 @@
 - [x] Insertion Sort
 - [x] Merge Sort
 - [x] Quick Sort
+
+## Arrays
+- [x] Reverse Array
+- [x] Second Largest Element

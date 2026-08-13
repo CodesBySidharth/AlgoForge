@@ -107,6 +107,7 @@ void arraysMenu() {
     do {
         cout << "\n===== Arrays =====\n";
         cout << "1. Reverse Array\n";
+        cout << "2. Second Largest Element\n";
         cout << "0. Back\n";
         cout << "Enter your choice: ";
         cin >> choice;
@@ -114,6 +115,9 @@ void arraysMenu() {
             case 1:
                 reverseArray();
                 break;
+            case 2:
+                secondLargest();
+                break;    
             case 0:
                 break;
             default:

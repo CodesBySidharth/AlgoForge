@@ -26,3 +26,30 @@ void reverseArray() {
     cout << endl;
     delete[] arr;
 }
+void secondLargest() {
+    int n;
+    cout << "\n--- Second Largest Element ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    if(n < 2) {
+        cout << "Need at least 2 elements.\n";
+        return;}
+    int* arr = new int[n];
+    cout << "Enter elements: ";
+    for(int i = 0; i < n; i++) {
+        cin >> arr[i];}
+    int largest = arr[0];
+    int second = -1;
+    for(int i = 1; i < n; i++) {
+        if(arr[i] > largest) {
+            second = largest;
+            largest = arr[i];
+        }
+        else if(arr[i] > second && arr[i] != largest) {
+            second = arr[i]; }}
+    if(second == -1)
+        cout << "No second largest element found.\n";
+    else
+        cout << "Second Largest = " << second << endl;
+    delete[] arr;
+}
