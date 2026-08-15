@@ -53,3 +53,28 @@ void secondLargest() {
         cout << "Second Largest = " << second << endl;
     delete[] arr;
 }
+void rotateArray() {
+    int n;
+    cout << "\n--- Array Rotation ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    int* arr = new int[n];
+    cout << "Enter elements: ";
+    for(int i = 0; i < n; i++) {
+        cin >> arr[i];}
+    int k;
+    cout << "Enter number of rotations: ";
+    cin >> k;
+    k = k % n;
+    int* temp = new int[n];
+    for(int i = 0; i < n; i++) {
+        temp[(i + k) % n] = arr[i];
+    }
+    cout << "\nRotated Array:\n";
+    for(int i = 0; i < n; i++) {
+        cout << temp[i] << " ";
+    }
+    cout << endl;
+    delete[] arr;
+    delete[] temp;
+}

@@ -2,5 +2,6 @@
 #define ARRAYS_H
 
 void reverseArray();
-void secondLargest();
+void secondLargest();\
+void rotateArray();
 #endif
