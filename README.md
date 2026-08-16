@@ -21,3 +21,4 @@
 - [x] Reverse Array
 - [x] Second Largest Element
 - [x] Array Rotation
+- [x] Maximum Subarray Sum (Kadane's Algorithm)

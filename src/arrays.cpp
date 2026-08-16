@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "../include/arrays.h"
 using namespace std;
 
@@ -77,4 +78,21 @@ void rotateArray() {
     cout << endl;
     delete[] arr;
     delete[] temp;
+}
+void maxSubarraySum() {
+    int n;
+    cout << "\n--- Maximum Subarray Sum (Kadane's Algorithm) ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    int* arr = new int[n];
+    cout << "Enter elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];}
+    int currentSum = arr[0];
+    int maxSum = arr[0];
+    for (int i = 1; i < n; i++) {
+        currentSum = max(arr[i], currentSum + arr[i]);
+        maxSum = max(maxSum, currentSum);}
+    cout << "Maximum Subarray Sum = " << maxSum << endl;
+    delete[] arr;
 }
