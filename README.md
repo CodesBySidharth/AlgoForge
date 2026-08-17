@@ -22,3 +22,4 @@
 - [x] Second Largest Element
 - [x] Array Rotation
 - [x] Maximum Subarray Sum (Kadane's Algorithm)
+- [x] Maximum & Minimum Element

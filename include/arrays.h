@@ -5,4 +5,5 @@ void reverseArray();
 void secondLargest();\
 void rotateArray();
 void maxSubarraySum();
+void findMaxMin();
 #endif

@@ -96,3 +96,27 @@ void maxSubarraySum() {
     cout << "Maximum Subarray Sum = " << maxSum << endl;
     delete[] arr;
 }
+void findMaxMin() {
+    int n;
+    cout << "\n--- Maximum and Minimum Element ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    if (n <= 0) {
+        cout << "Invalid array size.\n";
+        return; }
+    int* arr = new int[n];
+    cout << "Enter elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];}
+    int maximum = arr[0];
+    int minimum = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > maximum)
+            maximum = arr[i];
+        if (arr[i] < minimum)
+            minimum = arr[i];
+    }
+    cout << "Maximum Element = " << maximum << endl;
+    cout << "Minimum Element = " << minimum << endl;
+    delete[] arr;
+}

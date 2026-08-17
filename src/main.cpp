@@ -110,6 +110,7 @@ void arraysMenu() {
         cout << "2. Second Largest Element\n";
         cout << "3. Rotate Array\n";
         cout << "4. Maximum Subarray Sum\n";
+        cout << "5. Maximum & Minimum Element\n";
         cout << "0. Back\n";
         cout << "Enter your choice: ";
         cin >> choice;
@@ -118,14 +119,17 @@ void arraysMenu() {
                 reverseArray();
                 break;
             case 2:
-                secondLargest();
-                break;    
+                   secondLargest();
+                    break;    
                 case 3:
-                rotateArray();
-                break;
+                   rotateArray();
+                    break;
                 case 4:
-                maxSubarraySum();
-                break;
+                   maxSubarraySum();
+                    break;
+                case 5:
+                   findMaxMin();
+                     break;
             case 0:
                 break;
             default:
