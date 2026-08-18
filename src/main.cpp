@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../include/searching.h"
+#include "../include/strings.h"
 #include "../include/sorting.h"
 #include "../include/arrays.h"
 using namespace std;
@@ -73,7 +74,7 @@ void sortingMenu() {
         cout << "\n===== Sorting Algorithms =====\n";
         cout << "1. Bubble Sort\n";
         cout << "2. Selection Sort\n";
-        cout << "3. Insertion Sort\n"
+        cout << "3. Insertion Sort\n";
         cout << "4. Merge Sort\n";;
         cout << "5. Quick Sort\n";
         cout << "0. Back\n";
@@ -95,8 +96,8 @@ void sortingMenu() {
     case 5:
     quickSortDemo();
     break;
-            case 0:
-                break;
+    case 0:
+    break;
             default:
                 cout << "Invalid Choice!\n";
         }
@@ -135,6 +136,26 @@ void arraysMenu() {
             default:
                 cout << "Invalid Choice!\n";}
     } while(choice != 0);}
+
+    void stringsMenu() {
+    int choice;
+    do {
+        cout << "\n===== String Algorithms =====\n";
+        cout << "1. Palindrome Check\n";
+        cout << "0. Back\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+        switch (choice) {
+            case 1:
+                palindromeCheck();
+                break;
+            case 0:
+                break;
+            default:
+                cout << "Invalid Choice!\n";
+        }
+    } while (choice != 0);}
+
 int main() {
     int choice;
     do {
@@ -151,10 +172,10 @@ int main() {
                 cout << "Number Theory - Coming Soon!\n";
                 break;
             case 4:
-                 void arraysMenu()
-            case 5:
-                cout << "Strings - Coming Soon!\n";
-                break;
+                 void arraysMenu();
+           case 5:
+                 stringsMenu();
+                 break;
             case 6:
                 cout << "Stack & Queue - Coming Soon!\n";
                 break;

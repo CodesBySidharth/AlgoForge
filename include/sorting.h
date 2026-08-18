@@ -5,4 +5,5 @@ void bubbleSort();
 void selectionSort();
 void insertionSort();
 void quickSort();
+void quickSortDemo();
 #endif
