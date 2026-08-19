@@ -2,5 +2,5 @@
 #define STRINGS_H
 
 void palindromeCheck();
-
+void reverseString();
 #endif

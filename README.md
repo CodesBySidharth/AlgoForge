@@ -23,3 +23,8 @@
 - [x] Array Rotation
 - [x] Maximum Subarray Sum (Kadane's Algorithm)
 - [x] Maximum & Minimum Element
+
+## Strings
+
+- [x] Palindrome Check
+- [x] Reverse String

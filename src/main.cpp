@@ -137,17 +137,21 @@ void arraysMenu() {
                 cout << "Invalid Choice!\n";}
     } while(choice != 0);}
 
-    void stringsMenu() {
+   void stringsMenu() {
     int choice;
     do {
         cout << "\n===== String Algorithms =====\n";
         cout << "1. Palindrome Check\n";
+        cout << "2. Reverse String\n";
         cout << "0. Back\n";
         cout << "Enter your choice: ";
         cin >> choice;
         switch (choice) {
             case 1:
                 palindromeCheck();
+                break;
+            case 2:
+                reverseString();
                 break;
             case 0:
                 break;
