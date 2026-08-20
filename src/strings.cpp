@@ -38,3 +38,17 @@ void palindromeCheck() {
         right--;
     }
     cout << "Reversed String = " << s << endl;}     
+    void characterFrequency() {
+    string s;
+    cout << "\n--- Character Frequency ---\n";
+    cout << "Enter a string: ";
+    cin >> s;
+    int freq[256] = {0};
+    for (int i = 0; i < s.length(); i++) {
+        freq[(unsigned char)s[i]]++;
+    }
+    cout << "\nCharacter Frequencies:\n";
+    for (int i = 0; i < 256; i++) {
+        if (freq[i] > 0) {
+            cout << (char)i << " : " << freq[i] << endl;} }
+}

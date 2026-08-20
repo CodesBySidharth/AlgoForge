@@ -25,6 +25,6 @@
 - [x] Maximum & Minimum Element
 
 ## Strings
-
 - [x] Palindrome Check
 - [x] Reverse String
+- [x] Character Frequency

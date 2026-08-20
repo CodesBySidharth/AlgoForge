@@ -143,6 +143,7 @@ void arraysMenu() {
         cout << "\n===== String Algorithms =====\n";
         cout << "1. Palindrome Check\n";
         cout << "2. Reverse String\n";
+        cout << "3. Character Frequency\n";
         cout << "0. Back\n";
         cout << "Enter your choice: ";
         cin >> choice;
@@ -153,6 +154,9 @@ void arraysMenu() {
             case 2:
                 reverseString();
                 break;
+                case 3:
+                characterFrequency();
+                 break;
             case 0:
                 break;
             default:
