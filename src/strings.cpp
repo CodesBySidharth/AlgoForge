@@ -52,3 +52,25 @@ void palindromeCheck() {
         if (freq[i] > 0) {
             cout << (char)i << " : " << freq[i] << endl;} }
 }
+void anagramCheck() {
+    string s1, s2;
+    cout << "\n--- Anagram Check ---\n";
+    cout << "Enter first string: ";
+    cin >> s1;
+    cout << "Enter second string: ";
+    cin >> s2;
+    if (s1.length() != s2.length()) {
+        cout << "Not Anagrams\n";
+        return; }
+    int freq[256] = {0};
+    for (int i = 0; i < s1.length(); i++) {
+        freq[(unsigned char)s1[i]]++;
+        freq[(unsigned char)s2[i]]--;
+    }
+    for (int i = 0; i < 256; i++) {
+
+        if (freq[i] != 0) {
+            cout << "Not Anagrams\n";
+            return;}}
+    cout << "Anagrams\n";
+}

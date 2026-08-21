@@ -28,3 +28,4 @@
 - [x] Palindrome Check
 - [x] Reverse String
 - [x] Character Frequency
+- [x] Anagram Check

@@ -4,4 +4,5 @@
 void palindromeCheck();
 void reverseString();
 void characterFrequency();
+void anagramCheck();
 #endif
