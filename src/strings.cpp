@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 #include "../include/strings.h"
 using namespace std;
 
@@ -74,3 +75,23 @@ void anagramCheck() {
             return;}}
     cout << "Anagrams\n";
 }
+void countVowelsConsonants() {
+    string s;
+    cout << "\n--- Count Vowels & Consonants ---\n";
+    cout << "Enter a string: ";
+    cin >> s;
+    int vowels = 0;
+    int consonants = 0;
+    for (char ch : s) {
+    ch = tolower(ch);
+        if (ch >= 'a' && ch <= 'z') {
+            if (ch == 'a' || ch == 'e' || 
+                ch == 'i' || ch == 'o' || 
+                ch == 'u') {
+                vowels++;
+            }
+            else {
+                consonants++;
+            } } }
+    cout << "Vowels = " << vowels << endl;
+    cout << "Consonants = " << consonants << endl; }

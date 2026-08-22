@@ -29,3 +29,4 @@
 - [x] Reverse String
 - [x] Character Frequency
 - [x] Anagram Check
+- [x] Count Vowels and Consonants

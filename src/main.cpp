@@ -145,6 +145,7 @@ void arraysMenu() {
         cout << "2. Reverse String\n";
         cout << "3. Character Frequency\n";
         cout << "4. Anagram Check\n";
+        cout << "5. Count Vowels & Consonants\n";
         cout << "0. Back\n";
         cout << "Enter your choice: ";
         cin >> choice;
@@ -161,6 +162,9 @@ void arraysMenu() {
                  case 4:
                  anagramCheck();
                  break;
+                 case 5:
+                  countVowelsConsonants();
+                  break;
             case 0:
                 break;
             default:

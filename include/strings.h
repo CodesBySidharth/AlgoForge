@@ -5,4 +5,5 @@ void palindromeCheck();
 void reverseString();
 void characterFrequency();
 void anagramCheck();
+void countVowelsConsonants();
 #endif
