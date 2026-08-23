@@ -3,6 +3,7 @@
 #include "../include/strings.h"
 #include "../include/sorting.h"
 #include "../include/arrays.h"
+#include "../include/stack.h"
 using namespace std;
 
 void showMenu() {
@@ -193,7 +194,7 @@ int main() {
                  stringsMenu();
                  break;
             case 6:
-                cout << "Stack & Queue - Coming Soon!\n";
+                 stackUsingArray();
                 break;
             case 7:
                 cout << "Linked Lists - Coming Soon!\n";

@@ -30,3 +30,6 @@
 - [x] Character Frequency
 - [x] Anagram Check
 - [x] Count Vowels and Consonants
+
+## Stack & Queue
+- [x] Stack using Array
