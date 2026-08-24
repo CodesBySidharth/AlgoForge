@@ -4,6 +4,7 @@
 #include "../include/sorting.h"
 #include "../include/arrays.h"
 #include "../include/stack.h"
+#include "../include/queue.h"
 using namespace std;
 
 void showMenu() {
@@ -193,9 +194,20 @@ int main() {
            case 5:
                  stringsMenu();
                  break;
-            case 6:
-                 stackUsingArray();
-                break;
+          case 6:
+               cout << "\n===== Stack & Queue =====\n";
+               cout << "1. Stack Using Array\n";
+               cout << "2. Queue Using Array\n";
+               cout << "0. Back\n";
+
+               int sqChoice;
+               cin >> sqChoice;
+
+               if (sqChoice == 1)
+                   stackUsingArray();
+               else if (sqChoice == 2)
+        queueUsingArray();
+               break;
             case 7:
                 cout << "Linked Lists - Coming Soon!\n";
                 break;

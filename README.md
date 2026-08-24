@@ -33,3 +33,4 @@
 
 ## Stack & Queue
 - [x] Stack using Array
+- [x] Queue using Array
