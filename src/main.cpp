@@ -5,6 +5,7 @@
 #include "../include/arrays.h"
 #include "../include/stack.h"
 #include "../include/queue.h"
+#include "../include/stackLinkedList.h"
 using namespace std;
 
 void showMenu() {
@@ -198,6 +199,7 @@ int main() {
                cout << "\n===== Stack & Queue =====\n";
                cout << "1. Stack Using Array\n";
                cout << "2. Queue Using Array\n";
+               cout << "3. Stack Using Linked List\n";
                cout << "0. Back\n";
 
                int sqChoice;
@@ -207,7 +209,9 @@ int main() {
                    stackUsingArray();
                else if (sqChoice == 2)
         queueUsingArray();
-               break;
+               else if (sqChoice == 3)
+                stackUsingLinkedList();
+                break;
             case 7:
                 cout << "Linked Lists - Coming Soon!\n";
                 break;
