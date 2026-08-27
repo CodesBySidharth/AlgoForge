@@ -35,3 +35,4 @@
 - [x] Stack using Array
 - [x] Queue using Array
 - [x] Stack using Linked List
+- [x] Queue using Linked List
