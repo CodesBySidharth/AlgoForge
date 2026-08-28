@@ -7,6 +7,7 @@
 #include "../include/queue.h"
 #include "../include/stackLinkedList.h"
 #include "../include/queueLinkedList.h"
+#include "../include/linkedList.h"
 using namespace std;
 
 void showMenu() {
@@ -217,8 +218,8 @@ int main() {
                  queueUsingLinkedList(); 
                 break;
             case 7:
-                cout << "Linked Lists - Coming Soon!\n";
-                break;
+                 insertAtBeginning();
+                 break;
             case 8:
                 cout << "Trees - Coming Soon!\n";
                 break;

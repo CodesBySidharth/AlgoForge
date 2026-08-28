@@ -36,3 +36,6 @@
 - [x] Queue using Array
 - [x] Stack using Linked List
 - [x] Queue using Linked List
+
+## Linked Lists
+- [x] Insert at Beginning
