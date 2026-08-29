@@ -2,5 +2,5 @@
 #define LINKED_LIST_H
 
 void insertAtBeginning();
-
+void insertAtEnd();
 #endif

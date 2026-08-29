@@ -31,3 +31,34 @@ void insertAtBeginning() {
         head = head->next;
         delete temp;
     } }
+    void insertAtEnd() {
+    Node* head = nullptr;
+    int n;
+    cout << "\n--- Insert At End ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int value;
+        cout << "Enter value: ";
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;}
+        else {
+            Node* temp = head;
+            while (temp->next != nullptr) {
+                temp = temp->next;   }
+            temp->next = newNode;   } }
+    cout << "Linked List: ";
+    Node* temp = head;
+    while (temp != nullptr) {
+        cout << temp->data << " ";
+        temp = temp->next;}
+    cout << endl;
+    while (head != nullptr) {
+        Node* temp = head;
+        head = head->next;
+        delete temp; }
+}

@@ -218,7 +218,16 @@ int main() {
                  queueUsingLinkedList(); 
                 break;
             case 7:
-                 insertAtBeginning();
+                 cout << "\n===== Linked List =====\n";
+                 cout << "1. Insert At Beginning\n";
+                 cout << "2. Insert At End\n";
+                 cout << "0. Back\n";
+                 int choice;
+                 cin >> choice;
+                 if (choice == 1)
+                     insertAtBeginning();
+                 else if (choice == 2)
+                     insertAtEnd();
                  break;
             case 8:
                 cout << "Trees - Coming Soon!\n";
