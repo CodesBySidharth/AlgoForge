@@ -62,3 +62,52 @@ void insertAtBeginning() {
         head = head->next;
         delete temp; }
 }
+void insertAtPosition() {
+    Node* head = nullptr;
+    int n;
+    cout << "\n--- Insert At Position ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int value;
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;  }
+        else {
+            Node* temp = head;
+            while (temp->next != nullptr) {
+                temp = temp->next; }
+            temp->next = newNode; } }
+    int position;
+    int value;
+    cout << "Enter position: ";
+    cin >> position;
+    cout << "Enter value: ";
+    cin >> value;
+    Node* newNode = new Node();
+    newNode->data = value;
+    if (position == 1) {
+        newNode->next = head;
+        head = newNode; }
+    else {
+        Node* temp = head;
+        for (int i = 1; i < position - 1; i++) {
+            temp = temp->next;
+        }
+        newNode->next = temp->next;
+        temp->next = newNode;}
+    cout << "Linked List: ";
+  Node* temp = head;
+    while (temp != nullptr) {
+        cout << temp->data << " ";
+        temp = temp->next; }
+    cout << endl;
+    while (head != nullptr) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+    }
+}

@@ -3,4 +3,5 @@
 
 void insertAtBeginning();
 void insertAtEnd();
+void insertAtPosition();
 #endif
