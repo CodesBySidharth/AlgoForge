@@ -111,3 +111,55 @@ void insertAtPosition() {
         delete temp;
     }
 }
+void deleteNode() {
+    Node* head = nullptr;
+    int n;
+    cout << "\n--- Delete Node ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int value;
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;
+        }
+        else {
+            Node* temp = head;
+            while (temp->next != nullptr)
+                temp = temp->next;
+            temp->next = newNode;
+        } }
+    int value;
+    cout << "Enter value to delete: ";
+    cin >> value;
+    if (head != nullptr && head->data == value) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;  }
+    else {
+        Node* temp = head;
+        while (temp != nullptr &&
+               temp->next != nullptr &&
+               temp->next->data != value) {
+            temp = temp->next;}
+        if (temp == nullptr || temp->next == nullptr) {
+            cout << "Value not found.\n";
+        }
+        else {
+            Node* nodeToDelete = temp->next;
+            temp->next = nodeToDelete->next;
+            delete nodeToDelete;
+            cout << "Node deleted successfully.\n";}}
+    cout << "Linked List: ";
+    Node* temp = head;
+    while (temp != nullptr) {
+        cout << temp->data << " ";
+        temp = temp->next;}
+    cout << endl;
+    while (head != nullptr) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;}}

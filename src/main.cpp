@@ -222,6 +222,7 @@ int main() {
                  cout << "1. Insert At Beginning\n";
                  cout << "2. Insert At End\n";
                  cout << "3. Insert At Position\n";
+                 cout << "4. Delete Node\n";
                  cout << "0. Back\n";
                  int choice;
                  cin >> choice;
@@ -230,7 +231,9 @@ int main() {
                  else if (choice == 2)
                      insertAtEnd();
                  else if (choice == 3)
-                     insertAtPosition();     
+                     insertAtPosition(); 
+                 else if (choice == 4)
+                     deleteNode();        
                  break;
             case 8:
                 cout << "Trees - Coming Soon!\n";

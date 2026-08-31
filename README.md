@@ -41,3 +41,4 @@
 - [x] Insert at Beginning
 - [x] Insert at End
 - [x] Insert at Position
+- [x] Delete Node

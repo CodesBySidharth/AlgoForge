@@ -4,4 +4,5 @@
 void insertAtBeginning();
 void insertAtEnd();
 void insertAtPosition();
+void deleteNode();
 #endif
