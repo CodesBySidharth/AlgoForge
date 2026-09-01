@@ -223,6 +223,7 @@ int main() {
                  cout << "2. Insert At End\n";
                  cout << "3. Insert At Position\n";
                  cout << "4. Delete Node\n";
+                 cout << "5. Search Node\n";
                  cout << "0. Back\n";
                  int choice;
                  cin >> choice;
@@ -233,7 +234,9 @@ int main() {
                  else if (choice == 3)
                      insertAtPosition(); 
                  else if (choice == 4)
-                     deleteNode();        
+                     deleteNode();   
+                 else if (choice == 5)
+                     searchNode();         
                  break;
             case 8:
                 cout << "Trees - Coming Soon!\n";

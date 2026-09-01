@@ -163,3 +163,45 @@ void deleteNode() {
         Node* temp = head;
         head = head->next;
         delete temp;}}
+
+void searchNode() {
+    Node* head = nullptr;
+    int n;
+    cout << "\n--- Search Node ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int value;
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;
+        }
+        else {
+            Node* temp = head;
+            while (temp->next != nullptr) {
+                temp = temp->next;
+            }
+            temp->next = newNode;} }
+    int value;
+    cout << "Enter value to search: ";
+    cin >> value;
+    Node* temp = head;
+    bool found = false;
+    while (temp != nullptr) {
+        if (temp->data == value) {
+            found = true;
+            break;
+        }
+        temp = temp->next;}
+    if (found)
+        cout << "Value found in the linked list.\n";
+    else
+        cout << "Value not found in the linked list.\n";
+    while (head != nullptr) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;}
+    }        

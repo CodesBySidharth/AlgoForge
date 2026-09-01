@@ -5,4 +5,5 @@ void insertAtBeginning();
 void insertAtEnd();
 void insertAtPosition();
 void deleteNode();
+void searchNode();
 #endif
