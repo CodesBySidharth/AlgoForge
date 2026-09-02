@@ -6,4 +6,5 @@ void insertAtEnd();
 void insertAtPosition();
 void deleteNode();
 void searchNode();
+void reverseLinkedList();
 #endif

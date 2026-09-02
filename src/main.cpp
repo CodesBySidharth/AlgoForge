@@ -224,6 +224,7 @@ int main() {
                  cout << "3. Insert At Position\n";
                  cout << "4. Delete Node\n";
                  cout << "5. Search Node\n";
+                 cout << "6. Reverse Linked List\n";
                  cout << "0. Back\n";
                  int choice;
                  cin >> choice;
@@ -236,7 +237,9 @@ int main() {
                  else if (choice == 4)
                      deleteNode();   
                  else if (choice == 5)
-                     searchNode();         
+                     searchNode();
+                 else if (choice == 6)
+                     reverseLinkedList();             
                  break;
             case 8:
                 cout << "Trees - Coming Soon!\n";

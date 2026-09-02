@@ -204,4 +204,43 @@ void searchNode() {
         Node* temp = head;
         head = head->next;
         delete temp;}
-    }        
+    }
+    void reverseLinkedList() {
+    Node* head = nullptr;
+    int n;
+    cout << "\n--- Reverse Linked List ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int value;
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;}
+        else {
+            Node* temp = head;
+            while (temp->next != nullptr)
+                temp = temp->next;
+            temp->next = newNode;   }
+    }
+    Node* previous = nullptr;
+    Node* current = head;
+    while (current != nullptr) {
+        Node* next = current->next;
+        current->next = previous;
+        previous = current;
+        current = next;}
+    head = previous;
+    cout << "Reversed Linked List: ";
+    Node* temp = head;
+    while (temp != nullptr) {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << endl;
+    while (head != nullptr) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;} }        
