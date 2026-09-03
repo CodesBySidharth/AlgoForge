@@ -44,3 +44,4 @@
 - [x] Delete Node
 - [x] Search Node
 - [x] Reverse Linked List
+- [x] Detect Cycle

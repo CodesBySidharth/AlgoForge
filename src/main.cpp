@@ -75,7 +75,7 @@ void searchingMenu() {
 }
 void sortingMenu() {
     int choice;
-    do {
+    do{
         cout << "\n===== Sorting Algorithms =====\n";
         cout << "1. Bubble Sort\n";
         cout << "2. Selection Sort\n";
@@ -225,6 +225,7 @@ int main() {
                  cout << "4. Delete Node\n";
                  cout << "5. Search Node\n";
                  cout << "6. Reverse Linked List\n";
+                 cout << "7. Detect Cycle\n";
                  cout << "0. Back\n";
                  int choice;
                  cin >> choice;
@@ -239,7 +240,9 @@ int main() {
                  else if (choice == 5)
                      searchNode();
                  else if (choice == 6)
-                     reverseLinkedList();             
+                     reverseLinkedList();   
+                 else if (choice == 7)
+                      detectCycle();              
                  break;
             case 8:
                 cout << "Trees - Coming Soon!\n";
@@ -260,5 +263,4 @@ int main() {
                 cout << "Invalid Choice! Try Again.\n";
         }
     } while (choice != 0);
-    return 0;
-}
+    return 0; }

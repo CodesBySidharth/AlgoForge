@@ -7,4 +7,5 @@ void insertAtPosition();
 void deleteNode();
 void searchNode();
 void reverseLinkedList();
+void detectCycle();
 #endif

@@ -243,4 +243,44 @@ void searchNode() {
     while (head != nullptr) {
         Node* temp = head;
         head = head->next;
-        delete temp;} }        
+        delete temp;} }   
+        
+   void detectCycle() {
+    Node* head = nullptr;
+    int n;
+    cout << "\n--- Detect Cycle ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int value;
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;}
+        else {
+            Node* temp = head;
+            while (temp->next != nullptr)
+                temp = temp->next;
+            temp->next = newNode;
+        } }
+    Node* slow = head;
+    Node* fast = head;
+    bool cycle = false;
+    while (fast != nullptr && fast->next != nullptr) {
+        slow = slow->next;
+        fast = fast->next->next;
+        if (slow == fast) {
+            cycle = true;
+            break; } }
+    if (cycle)
+        cout << "Cycle detected\n";
+    else
+        cout << "No cycle detected\n";
+    if (!cycle) {
+        while (head != nullptr) {
+            Node* temp = head;
+            head = head->next;
+            delete temp;
+        }  }}     
