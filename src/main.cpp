@@ -226,6 +226,7 @@ int main() {
                  cout << "5. Search Node\n";
                  cout << "6. Reverse Linked List\n";
                  cout << "7. Detect Cycle\n";
+                 cout << "8. Find Middle\n";
                  cout << "0. Back\n";
                  int choice;
                  cin >> choice;
@@ -242,7 +243,9 @@ int main() {
                  else if (choice == 6)
                      reverseLinkedList();   
                  else if (choice == 7)
-                      detectCycle();              
+                      detectCycle();    
+              else if (choice == 8)
+                      findMiddle();               
                  break;
             case 8:
                 cout << "Trees - Coming Soon!\n";

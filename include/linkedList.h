@@ -8,4 +8,5 @@ void deleteNode();
 void searchNode();
 void reverseLinkedList();
 void detectCycle();
+void findMiddle();
 #endif

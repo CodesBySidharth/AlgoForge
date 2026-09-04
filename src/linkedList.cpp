@@ -283,4 +283,35 @@ void searchNode() {
             Node* temp = head;
             head = head->next;
             delete temp;
-        }  }}     
+        }  }}
+     
+        void findMiddle() {
+    Node* head = nullptr;
+    int n;
+    cout << "\n--- Find Middle of Linked List ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int value;
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;}
+        else {
+            Node* temp = head;
+            while (temp->next != nullptr)
+                temp = temp->next;
+            temp->next = newNode;} }
+    Node* slow = head;
+    Node* fast = head;
+    while (fast != nullptr && fast->next != nullptr) {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    cout << "Middle element: " << slow->data << endl;
+    while (head != nullptr) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;  } }
