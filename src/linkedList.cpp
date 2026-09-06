@@ -315,3 +315,40 @@ void searchNode() {
         Node* temp = head;
         head = head->next;
         delete temp;  } }
+
+void findNthFromEnd() {
+    Node* head = nullptr;
+    int n;
+    cout << "\n--- Find Nth Node From End ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int value;
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;}
+        else {
+            Node* temp = head;
+            while (temp->next != nullptr)
+                temp = temp->next;
+            temp->next = newNode;}
+        }
+    int k;
+    cout << "Enter position from end: ";
+    cin >> k;
+    Node* fast = head;
+    Node* slow = head;
+    for (int i = 0; i < k; i++) {
+        fast = fast->next;
+    }
+    while (fast != nullptr) {
+        slow = slow->next;
+        fast = fast->next;}
+    cout << "Nth node from end: " << slow->data << endl;
+    while (head != nullptr) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;} }
