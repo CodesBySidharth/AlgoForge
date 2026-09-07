@@ -352,3 +352,56 @@ void findNthFromEnd() {
         Node* temp = head;
         head = head->next;
         delete temp;} }
+
+void detectCycle() {
+    Node* head = nullptr;
+    Node* tail = nullptr;
+    int n;
+    cout << "\n--- Detect Cycle in Linked List ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int value;
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+            tail->next = newNode;
+            tail = newNode;    }
+    }
+    int pos;
+    cout << "Enter position to create cycle (-1 for no cycle): ";
+    cin >> pos;
+    if (pos != -1) {
+        Node* cycleNode = head;
+        for (int i = 0; i < pos; i++) {
+            cycleNode = cycleNode->next;
+        }
+        tail->next = cycleNode;
+    }
+    Node* slow = head;
+    Node* fast = head;
+    bool cycle = false;
+    while (fast != nullptr && fast->next != nullptr) {
+        slow = slow->next;
+        fast = fast->next->next;
+        if (slow == fast) {
+            cycle = true;
+            break;
+        }
+    }
+    if (cycle)
+        cout << "Cycle detected\n";
+    else
+        cout << "No cycle detected\n";
+    if (cycle)
+        tail->next = nullptr;
+    while (head != nullptr) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;}  }

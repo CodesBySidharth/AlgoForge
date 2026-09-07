@@ -47,3 +47,4 @@
 - [x] Detect Cycle
 - [x] Find Middle of Linked List
 - [x] Find Nth Node From End
+- [x] Detect Cycle in Linked List

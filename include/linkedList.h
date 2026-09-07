@@ -10,4 +10,5 @@ void reverseLinkedList();
 void detectCycle();
 void findMiddle();
 void findNthFromEnd();
+void detectCycle();
 #endif

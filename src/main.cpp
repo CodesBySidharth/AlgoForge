@@ -228,6 +228,7 @@ int main() {
                  cout << "7. Detect Cycle\n";
                  cout << "8. Find Middle\n";
                  cout << "9. Find Nth Node From End\n";
+                 cout << "10. Detect Cycle\n";
                  cout << "0. Back\n";
                  int choice;
                  cin >> choice;
@@ -248,8 +249,10 @@ int main() {
               else if (choice == 8)
                       findMiddle(); 
                 else if (choice == 9)
-                     findNthFromEnd();                    
-                 break;
+                     findNthFromEnd(); 
+                else if(choice==10)
+                     detectCycle();                   
+                break;
             case 8:
                 cout << "Trees - Coming Soon!\n";
                 break;
