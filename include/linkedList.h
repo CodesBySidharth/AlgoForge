@@ -11,4 +11,5 @@ void detectCycle();
 void findMiddle();
 void findNthFromEnd();
 void detectCycle();
+void deleteNthFromEnd();
 #endif

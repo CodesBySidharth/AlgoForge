@@ -405,3 +405,56 @@ void detectCycle() {
         Node* temp = head;
         head = head->next;
         delete temp;}  }
+
+void deleteNthFromEnd() {
+    Node* head = nullptr;
+    int n;
+    cout << "\n--- Delete Nth Node From End ---\n";
+    cout << "Enter number of elements: ";
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int value;
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;
+        }
+        else {
+            Node* temp = head;
+            while (temp->next != nullptr)
+                temp = temp->next;
+            temp->next = newNode;
+        }
+    }
+    int k;
+    cout << "Enter position from end to delete: ";
+    cin >> k;
+    Node dummy;
+    dummy.next = head;
+    Node* fast = &dummy;
+    Node* slow = &dummy;
+    for (int i = 0; i <= k; i++)
+        fast = fast->next;
+    while (fast != nullptr) {
+        fast = fast->next;
+        slow = slow->next;
+    }
+    Node* temp = slow->next;
+    if (temp != nullptr) {
+        slow->next = temp->next;
+        delete temp;
+    }
+    head = dummy.next;
+    cout << "Updated Linked List: ";
+    Node* current = head;
+    while (current != nullptr) {
+        cout << current->data << " ";
+        current = current->next;
+    }
+    cout << endl;
+    while (head != nullptr) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;} }        
