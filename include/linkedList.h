@@ -12,4 +12,5 @@ void findMiddle();
 void findNthFromEnd();
 void detectCycle();
 void deleteNthFromEnd();
+void mergeTwoSortedLists();
 #endif

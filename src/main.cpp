@@ -230,6 +230,7 @@ int main() {
                  cout << "9. Find Nth Node From End\n";
                  cout << "10. Detect Cycle\n";
                  cout << "11. Delete Nth Node From End\n";
+                 cout << "12. Merge Two Sorted Linked Lists\n";
                  cout << "0. Back\n";
                  int choice;
                  cin >> choice;
@@ -255,6 +256,8 @@ int main() {
                      detectCycle();                   
                 else if(choice==11)
                      deleteNthFromEnd();                   
+                else if(choice==12)
+                       mergeTwoSortedLists();                   
                 break;
             case 8:
                 cout << "Trees - Coming Soon!\n";

@@ -457,4 +457,77 @@ void deleteNthFromEnd() {
     while (head != nullptr) {
         Node* temp = head;
         head = head->next;
-        delete temp;} }        
+        delete temp;} }    
+        
+void mergeTwoSortedLists() {
+    Node* head1 = nullptr;
+    Node* head2 = nullptr;
+    int n1, n2;
+    cout << "\n--- Merge Two Sorted Linked Lists ---\n";
+    cout << "Enter number of elements in first list: ";
+    cin >> n1;
+    cout << "Enter elements in sorted order: ";
+    for (int i = 0; i < n1; i++) {
+        int value;
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head1 == nullptr) {
+            head1 = newNode;
+        }
+        else {
+            Node* temp = head1;
+            while (temp->next != nullptr)
+                temp = temp->next;
+            temp->next = newNode;   }
+    }
+    cout << "Enter number of elements in second list: ";
+    cin >> n2;
+    cout << "Enter elements in sorted order: ";
+    for (int i = 0; i < n2; i++) {
+        int value;
+        cin >> value;
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = nullptr;
+        if (head2 == nullptr) {
+            head2 = newNode;
+        }
+        else {
+            Node* temp = head2;
+            while (temp->next != nullptr)
+                temp = temp->next;
+            temp->next = newNode;
+        }
+    }
+    Node dummy;
+    dummy.next = nullptr;
+    Node* current = &dummy;
+    while (head1 != nullptr && head2 != nullptr) {
+        if (head1->data <= head2->data) {
+            current->next = head1;
+            head1 = head1->next;
+        }
+        else {
+            current->next = head2;
+            head2 = head2->next;
+        }
+        current = current->next;
+    }
+    if (head1 != nullptr)
+        current->next = head1;
+    else
+        current->next = head2;
+    Node* mergedHead = dummy.next;
+    cout << "Merged Linked List: ";
+    Node* temp = mergedHead;
+    while (temp != nullptr) {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << endl;
+    while (mergedHead != nullptr) {
+        Node* temp = mergedHead;
+        mergedHead = mergedHead->next;
+        delete temp;}}    
